@@ -8,23 +8,51 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body class="light-theme">
-    <!--Заголовок-->
+    <!--Заголовоки с разной величиной (могут быть от 1 до 6)-->
     <h1>Список задач</h1>
+    <h1 class="secondHeading">Список задач</h1>
+    <h3>Список задач</h3>
+    <h6>Список задач</h6>
+
+    <!--Изображение-->
+    <img src="20220109_033354.jpg" alt="my cat Stepan" width="144" height="182">
+
     <!--Абзац-->
+    <p title="Нужно выполнить задачи ниже">Заголовок с подсказкой</p>
+
     <b>
-        <p id="msg">Нужно:</p>
+        <p id="msg" class="">Нужно:</p>
     </b>
-    <!--ul (неупорядоченный список)-->
-    <ul>
-        <li class="list">Покормить кота</li>
-        <li class="list">Поиграть с котом</li>
-        <li class="list">Погладить кота:</li>
+    
+    <div class="allList">
+        <!--ul (неупорядоченный список)-->
         <ul>
-            <li>Уши</li>
-            <li>Лапы</li>
-            <li>Спинку</li>
+            <li class="list">Покормить кота;</li>
+            <li class="list">Поиграть с котом;</li>
+            <li class="list">Погладить кота:</li>
+            <ul>
+                <li>Уши;</li>
+                <li>Лапы;</li>
+                <li>Спинку.</li>
+            </ul>
         </ul>
-    </ul>
+    </div>
+    
+    <!--HTML ссылки определяются тегом <a></a>-->
+    <a href="https://github.com/YulyaKalashnikova?tab=repositories">Ссылка на гит с проектом</a>
+
+    <h1>Заголовок 1</h1>
+    <p>Здесь должен быть текст</p>
+    <hr>
+    <h2>Заголовок 2</h2>
+    <p>Здесь должен быть текст</p>
+    <hr>
+
+    <p>Это абзац, но <br> строка была перенесена.</p>
+
+    <strong>This text is important!</strong>
+
+    <!--div контейнер для элементов, который используется для группировки-->
     <div>
         <button class="btn">Dark</button>
     </div>

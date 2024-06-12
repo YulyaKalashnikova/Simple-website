@@ -3,6 +3,9 @@ body {
     color: var(--fontColor);
     font-family: helvetica;
 }
+.secondHeading {
+    font-size:60px
+}
 
 li {
     list-style: circle;
@@ -12,9 +15,15 @@ li {
     list-style: square;
 }
 
-.light-theme {
-    color: #000000;
-    background: #00FF00;
+#msg {
+    font-family: monospace;
+    font-size: 25px;
+    color: cornflowerblue;
+  }
+
+.allList {
+    border-radius: 1cm;
+    border: 3px solid gray;
 }
 
 :root {
