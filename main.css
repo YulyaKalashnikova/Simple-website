@@ -1,113 +1,162 @@
 body {
-    background: var(--bg);
-    color: var(--fontColor);
-    font-family: helvetica;
+  background: var(--bg);
+  color: var(--fontColor);
+  font-family: helvetica;
 }
 .secondHeading {
-    font-size:60px;
-    padding: 1px;
-    margin: 1px;
+  font-size:60px;
+  padding: 1px;
+  margin: 1px;
 }
 
 .square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+width: 50px;
+background-color: white;
+border-radius: 10px;
 }
 
 h1 {
-  padding: 1px;
-  margin: 1px;
-  color: white;
+padding: 1px;
+margin: 1px;
+color: white;
 }
 
 h2 {
-  padding: 1px;
-  margin: 1px;
+padding: 1px;
+margin: 1px;
 }
 
 h3 {
-  padding: 1px;
-  margin: 1px;
-  color: white;
+padding: 1px;
+margin: 1px;
+color: white;
+}
+
+h4 {
+padding: 1px;
+margin: 1px;
 }
 
 hr {
-  border: 2px solid white;
+border: 2px solid white;
 }
 
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 li {
-    list-style: circle;
-}
-
-.imageRow {
-  display: flex;
-  /*Расположение изображений с равными отступами между ними*/
-  justify-content: space-around;
-  /*Выравнивание изображений по центру*/
-  align-items: center;
-}
-
-.nameCat {
-  text-align: center;
+  list-style: circle;
 }
 
 .list {
-    list-style: square;
+  list-style: square;
+}
+
+.imageRow {
+display: flex;
+/*Расположение изображений с равными отступами между ними*/
+justify-content: space-around;
+/*Выравнивание изображений по центру*/
+align-items: center;
+}
+
+.nameCat {
+text-align: center;
 }
 
 #msg {
-    padding: 1px;
-    margin: 1px;
-    font-family: monospace;
-    font-size: 30px;
-  }
+  padding: 1px;
+  margin: 1px;
+  font-family: monospace;
+  font-size: 30px;
+}
 
 .allList {
-    border-radius: 1cm;
-    border: 2px solid white;
+  border-radius: 1cm;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.table {
+margin: 10px;
+padding: 10px;
+font-size: x-large;
 }
 
 :root {
-    --periwinkle: #CCCCFF;
-    --beige: #e5cd86;
-    --green: #00FF00;
-    --white: #FFFFFF;
-    --black: #000000;
+  --periwinkle: #CCCCFF;
+  --white: #FFFFFF;
+  --black: #000000;
 }
 
 .light-theme {
-    --bg: var(--periwinkle);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
-  }
-  
-  .dark-theme {
-    --bg: var(--black);
-    --fontColor: var(--green);
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
-  }
+  /*цвет фона, цвет шрифта*/
+  --bg: var(--periwinkle);
+  --fontColor: var(--black);
+  /*цвет кнопки*/
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+  /*цвет границ таблицы*/
+  --borderTable: var(--black);
+  /*цвет чётных строк в таблице*/
+  --lineColor: var(--white);
+  /*цвет шрифта в таблице*/
+  --fontColorTable: var(--black);
+}
 
-  .btn {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    display: block;
-    margin-left: left;
-    margin-right: left;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-  }
+.dark-theme {
+  /*цвет фона, цвет шрифта*/
+  --bg: var(--black);
+  --fontColor: var(--periwinkle);
+  /*цвет кнопки*/
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+  /*цвет границ таблицы*/
+  --borderTable: var(--white);
+  /*цвет чётных строк в таблице*/  
+  --lineColor: var(--periwinkle);
+  /*цвет шрифта в таблице*/
+  --fontColorTable: var(--black);
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  display: block;
+  margin-left: left;
+  margin-right: left;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+  margin: auto;
+}
+
+th, td {
+  /*Устанавливаем ширину каждого столбца в 25% от ширины таблица*/
+  width: 25%;
+  border: 1px;
+  border-color: var(--borderTable);
+  border-style: solid;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: var(--lineColor);
+}
+
+.typesOfCats {
+  color: var(--fontColorTable);
+}
