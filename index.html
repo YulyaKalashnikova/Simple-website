@@ -6,19 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple website</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="cat-paws.ico">
 </head>
 <body class="light-theme">
-    <!--Заголовоки с разной величиной (могут быть от 1 до 6)-->
-    <h1>Список задач</h1>
-    <h1 class="secondHeading">Список задач</h1>
-    <h3>Список задач</h3>
-    <h6>Список задач</h6>
+
+    <!--HTML ссылки определяются тегом <a></a>-->
+    <hr>
+    <ins><h2>Этот проект можно найти здесь</h2></ins>
+    <!--<p><a href="https://github.com/YulyaKalashnikova?tab=repositories" target="_blank">Ссылка на гит</a></p>-->
+    <div class="square">
+        <a href="https://github.com/YulyaKalashnikova?tab=repositories">
+            <img src="github.png" alt="github profile" target="_blank" alt="gitHub" style="width:42px;height:42px;">
+        </a>
+    </div>
+    <hr>   
 
     <!--Изображение-->
-    <img src="20220109_033354.jpg" alt="my cat Stepan" width="144" height="182">
+    <div class="imageRow">
+        <img src="6EWVm1Dej04.gif" alt="my cat Stepan" width="244" height="300">
+        <img src="B2RctB8li-w.jpg" alt="my cat Stepan" width="244" height="300">
+        <img src="20220109_033354.jpg" alt="my cat Stepan" width="244" height="300">
+        <img src="Степан.jpg" alt="my cat Stepan" width="244" height="300">
+    </div>
 
     <!--Абзац-->
-    <p title="Нужно выполнить задачи ниже">Заголовок с подсказкой</p>
+    <i><p class="nameCat" title="Стёпа">Наведите на этот текст, чтобы узнать, <small>как зовут кота</small></p></i>
+
+    <!--Заголовоки с разной величиной (могут быть от 1 до 6)-->
+    <h1>Список задач</h1>
+    <h2 class="secondHeading">Список задач</h2>
+    <h3>Список задач</h3>
 
     <b>
         <p id="msg" class="">Нужно:</p>
@@ -29,7 +46,7 @@
         <ul>
             <li class="list">Покормить кота;</li>
             <li class="list">Поиграть с котом;</li>
-            <li class="list">Погладить кота:</li>
+            <li class="list">Погладить:</li>
             <ul>
                 <li>Уши;</li>
                 <li>Лапы;</li>
@@ -38,24 +55,15 @@
         </ul>
     </div>
     
-    <!--HTML ссылки определяются тегом <a></a>-->
-    <a href="https://github.com/YulyaKalashnikova?tab=repositories">Ссылка на гит с проектом</a>
+    <h4>Вы можете переключить тему!</h4>
+    <p>
+        <div>
+            <button class="btn">Dark</button>
+        </div>
+    </p>
+    
+    <p>2024<small> год</small></p>
 
-    <h1>Заголовок 1</h1>
-    <p>Здесь должен быть текст</p>
-    <hr>
-    <h2>Заголовок 2</h2>
-    <p>Здесь должен быть текст</p>
-    <hr>
-
-    <p>Это абзац, но <br> строка была перенесена.</p>
-
-    <strong>This text is important!</strong>
-
-    <!--div контейнер для элементов, который используется для группировки-->
-    <div>
-        <button class="btn">Dark</button>
-    </div>
     <!--Тег script для связи с файлом JavaScript-->
     <script src="app.js"></script>
     <!--Если JavaScript выключен-->

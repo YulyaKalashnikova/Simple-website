@@ -4,11 +4,62 @@ body {
     font-family: helvetica;
 }
 .secondHeading {
-    font-size:60px
+    font-size:60px;
+    padding: 1px;
+    margin: 1px;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h1 {
+  padding: 1px;
+  margin: 1px;
+  color: white;
+}
+
+h2 {
+  padding: 1px;
+  margin: 1px;
+}
+
+h3 {
+  padding: 1px;
+  margin: 1px;
+  color: white;
+}
+
+hr {
+  border: 2px solid white;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 li {
     list-style: circle;
+}
+
+.imageRow {
+  display: flex;
+  /*Расположение изображений с равными отступами между ними*/
+  justify-content: space-around;
+  /*Выравнивание изображений по центру*/
+  align-items: center;
+}
+
+.nameCat {
+  text-align: center;
 }
 
 .list {
@@ -16,24 +67,27 @@ li {
 }
 
 #msg {
+    padding: 1px;
+    margin: 1px;
     font-family: monospace;
-    font-size: 25px;
-    color: cornflowerblue;
+    font-size: 30px;
   }
 
 .allList {
     border-radius: 1cm;
-    border: 3px solid gray;
+    border: 2px solid white;
 }
 
 :root {
+    --periwinkle: #CCCCFF;
+    --beige: #e5cd86;
     --green: #00FF00;
     --white: #FFFFFF;
     --black: #000000;
 }
 
 .light-theme {
-    --bg: var(--green);
+    --bg: var(--periwinkle);
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--white);
@@ -47,13 +101,13 @@ li {
   }
 
   .btn {
-    position: absolute;
-    top: 20px;
-    left: 250px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     border: none;
+    display: block;
+    margin-left: left;
+    margin-right: left;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
   }
