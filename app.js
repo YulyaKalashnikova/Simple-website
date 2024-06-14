@@ -10,11 +10,15 @@ switcher.addEventListener('click', function() {
     document.body.classList.toggle('light-theme'); // togle — удаление или изменение
     document.body.classList.toggle('dark-theme');
 
+    var img = document.getElementById("theme-image");
+
     const className = document.body.className; // Эта строка сохраняет текущие классы элемента <body> в переменной className
     if(className == "light-theme") {
         this.textContent = "Dark"; // Если тема светлая, то на кнопке будет написано Dark
+        img.src = "top-arrow-black.png" // стрелка будет чёрной
     } else {
         this.textContent = "Light"; // Тут наоборот
+        img.src = "top-arrow-white.png"
     }
 
     console.log('current class name: ' + className);

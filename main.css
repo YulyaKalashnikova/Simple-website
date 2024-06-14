@@ -3,52 +3,93 @@ body {
   color: var(--fontColor);
   font-family: helvetica;
 }
-.secondHeading {
+
+/* Сброс стилей списка */
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+/* Стилизация элементов списка */
+.nav-menu li {
+  float: left;
+}
+
+/* Стилизация ссылок */
+.nav-menu a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Стилизация ссылок при наведении */
+.nav-menu a:hover {
+  /*Подчёркивание ссылок при наведении*/
+  text-decoration: underline;
+}
+
+.square {
+  /*для автоматического распределения по пространству*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.img-github {
+  width: 42px;
+  height: 42px;
+  display: block;
+  margin-left: left;
+  margin-right: left;
+}
+
+hr {
+  border: 2px solid white;
+}
+
+.image-row {
+  display: flex;
+  /*Расположение изображений с равными отступами между ними*/
+  justify-content: space-around;
+  /*Выравнивание изображений по центру*/
+  align-items: center;
+}
+
+.name-cat{
+  text-align: center;
+}
+
+h2 {
+  padding: 1px;
+  margin: 1px;
+}
+
+.heading {
   font-size:60px;
   padding: 1px;
   margin: 1px;
 }
 
-.square {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 50px;
-width: 50px;
-background-color: white;
-border-radius: 10px;
+#msg {
+  padding: 1px;
+  margin: 1px;
+  font-family: monospace;
+  font-size: 30px;
 }
 
-h1 {
-padding: 1px;
-margin: 1px;
-color: white;
-}
-
-h2 {
-padding: 1px;
-margin: 1px;
-}
-
-h3 {
-padding: 1px;
-margin: 1px;
-color: white;
-}
-
-h4 {
-padding: 1px;
-margin: 1px;
-}
-
-hr {
-border: 2px solid white;
-}
-
-img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+.all-list {
+  border-radius: 1cm;
+  border: 2px solid white;
+  font-size: 20px;
 }
 
 li {
@@ -59,35 +100,39 @@ li {
   list-style: square;
 }
 
-.imageRow {
-display: flex;
-/*Расположение изображений с равными отступами между ними*/
-justify-content: space-around;
-/*Выравнивание изображений по центру*/
-align-items: center;
-}
-
-.nameCat {
-text-align: center;
-}
-
-#msg {
-  padding: 1px;
-  margin: 1px;
-  font-family: monospace;
-  font-size: 30px;
-}
-
-.allList {
-  border-radius: 1cm;
-  border: 2px solid white;
-  font-size: 20px;
+.table-container {
+  display: flex;
+  /*распределение пространства равномерно между таблицами*/
+  justify-content: space-around;
+  /*перенос таблицы на новую строку*/
+  flex-wrap: wrap;
 }
 
 .table {
-margin: 10px;
-padding: 10px;
-font-size: x-large;
+  width: 100%;
+  margin: 10px;
+  font-size: 25px;
+}
+
+th, td {
+  /*Устанавливаем ширину каждого столбца в 25% от ширины таблица*/
+  width: 25%;
+  border: 1px;
+  border-color: var(--borderTable);
+  border-style: solid;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: var(--lineColor);
+}
+
+.even-lines {
+  color: var(--fontColorTable);
+}
+
+.margin-null {
+  margin: 0;
 }
 
 :root {
@@ -136,27 +181,18 @@ font-size: x-large;
   margin-right: left;
   color: var(--btnFontColor);
   background-color: var(--btnBg);
+  margin: 10px;
 }
 
-table {
-  border-collapse: collapse;
-  width: auto;
-  margin: auto;
-}
-
-th, td {
-  /*Устанавливаем ширину каждого столбца в 25% от ширины таблица*/
-  width: 25%;
-  border: 1px;
-  border-color: var(--borderTable);
-  border-style: solid;
-  text-align: center;
-}
-
-tr:nth-child(even) {
-  background: var(--lineColor);
-}
-
-.typesOfCats {
-  color: var(--fontColorTable);
+.img-top {
+  position: fixed;
+  right: -15px;
+  top: 650px;
+  background-color: #333333;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
 }

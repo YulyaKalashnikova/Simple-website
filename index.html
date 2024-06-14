@@ -9,20 +9,26 @@
     <link rel="icon" type="image/x-icon" href="cat-paws.ico">
 </head>
 <body class="light-theme">
+    <nav>
+        <ul class="nav-menu" id="top">
+            <li><a href="#task_list">Список задач</a></li>
+            <li><a href="#tables">Таблицы</a></li>
+            <li><a href="#switch_theme">Переключить тему</a></li>
+        </ul>
+    </nav>
 
     <!--HTML ссылки определяются тегом <a></a>-->
     <hr>
-    <ins><h2>Этот проект можно найти на GitHub</h2></ins>
-    <!--<p><a href="https://github.com/YulyaKalashnikova?tab=repositories" target="_blank">Ссылка на гит</a></p>-->
+    <ins><h2>Этот проект можно скачать на GitHub</h2></ins>
     <div class="square">
         <a href="https://github.com/YulyaKalashnikova/Simple-website" target="_blank">
-            <img src="github.png" alt="github profile" alt="gitHub" style="width:42px;height:42px;">
+            <img class="img-github" src="github.png" alt="github profile">
         </a>
     </div>
     <hr>   
 
-    <!--Изображение-->
-    <div class="imageRow">
+    <!--Изображения-->
+    <div class="image-row">
         <img src="6EWVm1Dej04.gif" alt="my cat Stepan" width="244" height="300">
         <img src="B2RctB8li-w.jpg" alt="my cat Stepan" width="244" height="300">
         <img src="20220109_033354.jpg" alt="my cat Stepan" width="244" height="300">
@@ -30,18 +36,18 @@
     </div>
 
     <!--Абзац-->
-    <i><p class="nameCat" title="Стёпа">Наведите на этот текст, чтобы узнать, <small>как зовут кота</small></p></i>
+    <i><p class="name-cat" title="Стёпа">Наведите на этот текст, чтобы узнать, <small>как зовут кота</small></p></i>
 
     <!--Заголовоки с разной величиной (могут быть от 1 до 6)-->
     <!--<h1>Список задач</h1>-->
-    <h2 class="secondHeading">Список задач</h2>
+    <h2 id="task_list" class="heading">Список задач</h2>
     <!--<h3>Список задач</h3>-->
 
     <b>
         <p id="msg" class="">Нужно:</p>
     </b>
     
-    <div class="allList">
+    <div class="all-list">
         <!--ul (неупорядоченный список)-->
         <ul>
             <li class="list">Покормить кота;</li>
@@ -55,17 +61,23 @@
         </ul>
     </div>
 
-    <div class="table">
-        <table>
+    <div class="table-container">
+        <!--Первая таблица-->
+        <table id="tables" class="table">
+            <!--
+            <tr> — строка таблицы
+            <td> — ячейка с данными
+            <th> — ячейка заголовка таблицы
+            -->
             <tr>
                 <th>Виды котов</th>
                 <th>Особенности ухода</th>
                 <th>Характер</th>
             </tr>
             <tr>
-                <td class="typesOfCats">Короткошерстные</td>
-                <td class="typesOfCats">Расчёсывание раз в неделю</td>
-                <td class="typesOfCats">Независимый, игривый, ласковый</td>
+                <td class="even-lines">Короткошерстные</td>
+                <td class="even-lines">Расчёсывание раз в неделю</td>
+                <td class="even-lines">Независимый, игривый, ласковый</td>
             </tr>
             <tr>
                 <td>Длинношерстные</td>
@@ -73,26 +85,65 @@
                 <td>Охотничий, спокойный, подвижный</td>
             </tr>
             <tr>
-                <td class="typesOfCats">Полудлинношерстные</td>
-                <td class="typesOfCats">Груминг раз в две недели</td>
-                <td class="typesOfCats">Сообразительный, территориальный, общительный</td>
+                <td class="even-lines">Полудлинношерстные</td>
+                <td class="even-lines">Груминг раз в две недели</td>
+                <td class="even-lines">Сообразительный, территориальный, общительный</td>
             </tr>
+        </table>
+
+        <!--Вторая таблица-->
+        <table class="table">
+            <tr>
+              <th colspan="2">Порода</th>
+              <th>Возраст</th>
+            </tr>
+            <tr>
+              <td class="even-lines">Сибирская кошка</td>
+              <td class="even-lines">Мэнкс</td>
+              <td class="even-lines">5</td>
+            </tr>
+            <tr>
+              <td>Сфинкс</td>
+              <td>Бурма</td>
+              <td>9</td>
+            </tr>
+          </table>
+
+        <!--Третья таблица-->
+        <table class="table">
+        <tr>
+            <th>Имя</th>
+            <td>Стёпа</td>
+        </tr>
+        <tr>
+            <th rowspan="2" class="even-lines">Корм</th>
+            <td class="even-lines">Мясо</td>
+        </tr>
+        <tr>
+            <td>Рыба</td>
+        </tr>
         </table>
     </div>
         
     <hr>
-    <h4>Вы можете переключить тему!</h4>
-    <p>
-        <div>
-            <button class="btn">Dark</button>
-        </div>
-    </p>
-    
-    <p>2024<small> год</small></p>
+    <h4 class="margin-null" id="switch_theme">Вы можете переключить тему!</h4>
+
+    <div class="button-container">
+        <button class="btn">Dark</button>
+        
+    </div>
+
+    <div>
+        <a href="#top" style="position: relative">
+            <img id="theme-image" class="img-top" src="top-arrow-black.png" alt="arrow">
+        </a>
+    </div>
+
+    <p class="margin-null">2024 <small>год</small></p>
 
     <!--Тег script для связи с файлом JavaScript-->
     <script src="app.js"></script>
     <!--Если JavaScript выключен-->
-    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <noscript>Вам необходимо включить JavaScript для просмотра полной версии сайта.</noscript>
 </body>
 </html>
