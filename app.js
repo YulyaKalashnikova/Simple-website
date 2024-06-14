@@ -10,17 +10,39 @@ switcher.addEventListener('click', function() {
     document.body.classList.toggle('light-theme'); // togle — удаление или изменение
     document.body.classList.toggle('dark-theme');
 
-    var img = document.getElementById("theme-image");
+    var imgArrowTop = document.getElementById("top-arrow");
+    var imgBulb = document.getElementById('bulb');
 
     const className = document.body.className; // Эта строка сохраняет текущие классы элемента <body> в переменной className
     if(className == "light-theme") {
         this.textContent = "Dark"; // Если тема светлая, то на кнопке будет написано Dark
-        img.src = "Images/top-arrow-black.png" // стрелка будет чёрной
+        imgArrowTop.src = "Images/top-arrow-black.png" // стрелка будет чёрной
+        imgBulb.src = "Images/off-light-theme.png"
     } else {
         this.textContent = "Light"; // Тут наоборот
-        img.src = "Images/top-arrow-white.png"
+        imgArrowTop.src = "Images/top-arrow-white.png"
+        imgBulb.src = "Images/off-dark-theme.png"
     }
 
     console.log('current class name: ' + className);
 });
+
+// Переключение лампочки
+function light(sw) {
+    var image;
+    const className = document.body.className;
+    if (sw == 0 && className == "light-theme") {
+        image = "Images/off-light-theme.png"
+    }
+    if (sw == 0 && className == "dark-theme") {
+        image = "Images/off-dark-theme.png"
+    }
+    if (sw == 1 && className == "light-theme") {
+        image = "Images/on-light-theme.png"
+    } 
+    if (sw == 1 && className == "dark-theme") {
+        image = "Images/on-dark-theme.png"
+    }
+    document.getElementById('bulb').src = image;
+}
 

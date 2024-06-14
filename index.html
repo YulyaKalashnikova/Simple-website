@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat website</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="cat-paws.ico">
+    <link rel="icon" type="image/x-icon" href="Images/cat-paws.ico">
 </head>
 <body class="light-theme">
     <nav>
         <ul class="nav-menu" id="top">
             <li><a href="#task_list">Список задач</a></li>
             <li><a href="#tables">Таблицы</a></li>
+            <li><a href="#bulb">Лампочка и факты</a></li>
             <li><a href="#switch_theme">Переключить тему</a></li>
         </ul>
     </nav>
@@ -34,7 +35,7 @@
         <img src="Images/Степан.jpg" alt="my cat Stepan" width="244" height="300">
     </div>
 
-    <!--Абзац-->
+    <!--<p> — абзац, <i> — курсив-->
     <i><p class="name-cat" title="Стёпа">Наведите на этот текст, чтобы узнать, <small>как зовут кота</small></p></i>
 
     <!--Заголовоки с разной величиной (могут быть от 1 до 6)-->
@@ -117,24 +118,51 @@
         </tr>
         </table>
     </div>
-        
+
     <hr>
-    <h4 class="margin-null" id="switch_theme">Вы можете переключить тему!</h4>
+    <img id="bulb" class="img-bulb" src="Images/off-light-theme.png" width="100" height="180">
+    <p>
+        <button onclick="light(1)">Включить</button>
+        <button onclick="light(0)">Выключить</button>
+    </p>
 
-    <div class="button-container">
-        <div class="content1">
-            <button class="btn">Dark</button>
+    <article class="all-facts">
+        <h1 class="h1-facts">Факты о котах и кошках</h1>
+        <article class="fact">
+          <h2>Факт №1</h2>
+          <p>Частота пульса у кошки гораздо выше, чем у человека и составляет от 110 до 140 ударов сердца в минуту</p>
+        </article>
+        <article class="fact">
+          <h2>Факт №2</h2>
+          <p>Кошка размахивает хвостом в том случае, когда она не может сделать выбор</p>
+        </article>
+        <article class="fact">
+          <h2>Факт №3</h2>
+          <p>У кошки 517 мускулов. При этом 12 из них используется для управления каждым ухом</p>
+        </article>
+      </article>
+
+    <!--Подвал-->
+    <hr>
+    <footer>
+        <h4 class="margin-null" id="switch_theme">Вы можете переключить тему!</h4>
+
+        <div class="button-container">
+            <div class="content1">
+                <button class="btn">Dark</button>
+            </div>
+
+            <div class="align">
+
+                <a href="#top" class="content2" style="position: relative">
+                    <img id="top-arrow" class="img-top-arrow" src="Images/top-arrow-black.png" alt="arrow">
+                </a>
+            </div>
         </div>
 
-        <div class="align">
+        <p class="margin-null">2024 <small>год</small></p>        
+    </footer>
 
-            <a href="#top" class="content2" style="position: relative">
-                <img id="theme-image" class="img-top-arrow" src="Images/top-arrow-black.png" alt="arrow">
-            </a>
-        </div>
-    </div>
-
-    <p class="margin-null">2024 <small>год</small></p>
 
     <!--Тег script для связи с файлом JavaScript-->
     <script src="app.js"></script>
