@@ -73,17 +73,10 @@ h2 {
   margin: 1px;
 }
 
-.heading {
-  font-size:60px;
+.heading-task-list {
+  font-size: 40px;
   padding: 1px;
   margin: 1px;
-}
-
-#msg {
-  padding: 1px;
-  margin: 1px;
-  font-family: monospace;
-  font-size: 30px;
 }
 
 .all-list {
@@ -112,15 +105,17 @@ li {
   width: 100%;
   margin: 10px;
   font-size: 25px;
+  border-collapse: collapse;
 }
 
 th, td {
   /*Устанавливаем ширину каждого столбца в 25% от ширины таблица*/
   width: 25%;
-  border: 1px;
+  border: 2px;
   border-color: var(--borderTable);
   border-style: solid;
   text-align: center;
+  border-collapse: collapse;
 }
 
 tr:nth-child(even) {
