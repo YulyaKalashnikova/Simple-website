@@ -179,10 +179,7 @@ tr:nth-child(even) {
   margin: 10px;
 }
 
-.img-top {
-  position: fixed;
-  right: -15px;
-  top: 650px;
+.img-top-arrow {
   background-color: #333333;
   color: white;
   padding: 14px 20px;
@@ -191,3 +188,12 @@ tr:nth-child(even) {
   height: 42px;
   background-color: transparent;
 }
+
+.button-container {
+  display:flex;
+  justify-content: space-between;
+}
+
+  .align{
+  display:flex;
+  }

@@ -15,10 +15,10 @@ switcher.addEventListener('click', function() {
     const className = document.body.className; // Эта строка сохраняет текущие классы элемента <body> в переменной className
     if(className == "light-theme") {
         this.textContent = "Dark"; // Если тема светлая, то на кнопке будет написано Dark
-        img.src = "top-arrow-black.png" // стрелка будет чёрной
+        img.src = "Images/top-arrow-black.png" // стрелка будет чёрной
     } else {
         this.textContent = "Light"; // Тут наоборот
-        img.src = "top-arrow-white.png"
+        img.src = "Images/top-arrow-white.png"
     }
 
     console.log('current class name: ' + className);
