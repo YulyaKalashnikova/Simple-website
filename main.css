@@ -215,6 +215,10 @@ tr:nth-child(even) {
   --fontColorh1: var(--black);
 }
 
+.my-canvas {
+  border: 2px solid #333333;
+}
+
 .btn {
   height: 50px;
   width: 50px;

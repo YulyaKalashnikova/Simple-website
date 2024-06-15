@@ -16,11 +16,11 @@ switcher.addEventListener('click', function() {
     const className = document.body.className; // Эта строка сохраняет текущие классы элемента <body> в переменной className
     if(className == "light-theme") {
         this.textContent = "Dark"; // Если тема светлая, то на кнопке будет написано Dark
-        imgArrowTop.src = "Images/top-arrow-black.png" // стрелка будет чёрной
+        imgArrowTop.src = "Images/top-arrow-white-theme.png" // стрелка будет чёрной
         imgBulb.src = "Images/off-light-theme.png"
     } else {
         this.textContent = "Light"; // Тут наоборот
-        imgArrowTop.src = "Images/top-arrow-white.png"
+        imgArrowTop.src = "Images/top-arrow-dark-theme.png"
         imgBulb.src = "Images/off-dark-theme.png"
     }
 
@@ -31,12 +31,14 @@ switcher.addEventListener('click', function() {
 function light(sw) {
     var image;
     const className = document.body.className;
+    // выкл
     if (sw == 0 && className == "light-theme") {
         image = "Images/off-light-theme.png"
     }
     if (sw == 0 && className == "dark-theme") {
         image = "Images/off-dark-theme.png"
     }
+    //вкл
     if (sw == 1 && className == "light-theme") {
         image = "Images/on-light-theme.png"
     } 
@@ -45,4 +47,3 @@ function light(sw) {
     }
     document.getElementById('bulb').src = image;
 }
-
