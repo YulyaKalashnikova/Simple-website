@@ -159,6 +159,41 @@ tr:nth-child(even) {
   height: 205px;
 }
 
+.question-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.cell {
+  padding: 1px;
+}
+
+.textBox {
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.btn-input {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 17px;
+  background-color: #8000ff;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+}
+
+.btn-input:hover {background-color: #6614b8}
+
+.btn-input:active {
+  background-color: #6614b8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .margin-null {
   margin: 0;
 }
@@ -197,7 +232,7 @@ tr:nth-child(even) {
   --bg: var(--black);
   --fontColor: var(--periwinkle);
   /*цвет кнопки*/
-  --btnBg: var(--white);
+  --btnBg: var(--periwinkle);
   --btnFontColor: var(--black);
   /*цвет границ таблицы*/
   --borderTable: var(--white);
@@ -230,6 +265,7 @@ tr:nth-child(even) {
   color: var(--btnFontColor);
   background-color: var(--btnBg);
   margin: 10px;
+  cursor: pointer;
 }
 
 .img-top-arrow {

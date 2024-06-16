@@ -11,7 +11,7 @@ switcher.addEventListener('click', function() {
     document.body.classList.toggle('dark-theme');
 
     var imgArrowTop = document.getElementById("top-arrow");
-    var imgBulb = document.getElementById('bulb');
+    var imgBulb = document.getElementById('facts_and_bulb');
 
     const className = document.body.className; // Эта строка сохраняет текущие классы элемента <body> в переменной className
     if(className == "light-theme") {
@@ -45,5 +45,9 @@ function light(sw) {
     if (sw == 1 && className == "dark-theme") {
         image = "Images/on-dark-theme.png"
     }
-    document.getElementById('bulb').src = image;
+    document.getElementById('facts_and_bulb').src = image;
 }
+
+function alertBtn() {
+    alert("Мяу 🐈");
+  }
